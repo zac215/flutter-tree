@@ -1,23 +1,19 @@
 class TreeNodeData {
+  //Ajout
+  String? id;
+  //Fin
   String title;
-  bool expanded;
-  bool checked;
+  bool expaned=false;
+  bool checked=false;
   dynamic extra;
   List<TreeNodeData> children;
 
   TreeNodeData({
     required this.title,
-    required this.expanded,
+    required this.expaned,
     required this.checked,
     required this.children,
     this.extra,
+    this.id,
   });
-
-  TreeNodeData.from(TreeNodeData other):
-    this(title: other.title, expanded: other.expanded, checked: other.checked, extra: other.extra, children: other.children);
-
-  @override
-  String toString() {
-    return 'TreeNodeData{title: $title, expanded: $expanded, checked: $checked, extra: $extra, ${children.length} children}';
-  }
 }
